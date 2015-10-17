@@ -1,30 +1,12 @@
 package main
 
 import (
+	"./check"
 	"fmt"
 	"os"
 	"strconv"
 	"time"
 )
-
-// nがmで割り切れるかどうか
-func check(n *uint64, m *uint64) bool {
-	return *n % *m == 0
-}
-
-// nがa(スライス)で割り切れるかどうか
-func checkAll(n *uint64, a *[]uint64) bool {
-	arr := *a
-	ok := false
-	for _, i := range arr{
-		//fmt.Println(i)
-		if check(n, &i){
-			ok = true
-			break
-		}
-	}
-	return ok
-}
 
 func main() {
 	//処理時間開始
@@ -47,7 +29,7 @@ func main() {
 			arr = append(arr, num)
 			continue
 		}
-		if !checkAll(&num, &arr) {
+		if !check.CheckAll(&num, &arr) {
 			arr = append(arr, num)
 			continue
 		}
