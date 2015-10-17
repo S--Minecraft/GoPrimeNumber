@@ -2,6 +2,7 @@ package main
 
 import (
 	"./algo"
+	"./util"
 	"fmt"
 	"os"
 	"strconv"
@@ -24,13 +25,7 @@ func main() {
 
 	arr := algo.AllUpTo(&checkNum)
 
-	arr_s := ""
-	for i, v := range arr {
-		arr_s += strconv.FormatUint(v, 10)
-		if i != len(arr)-1 {
-			arr_s += ", "
-		}
-	}
+	arr_s := util.Uint64SliceToString(arr)
 	fmt.Println("素数: " + arr_s)
 	fmt.Print("計: ")
 	fmt.Print(len(arr))
