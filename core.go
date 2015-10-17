@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./check"
+	"./algo"
 	"fmt"
 	"os"
 	"strconv"
@@ -22,18 +22,7 @@ func main() {
 	}
 	fmt.Println("引数: " + strconv.FormatUint(checkNum, 10) + "\n")
 
-	arr := []uint64{}
-	var num uint64 = 2
-	for ; num <= checkNum; num++ {
-		if len(arr) == 0 {
-			arr = append(arr, num)
-			continue
-		}
-		if !check.CheckAll(&num, &arr) {
-			arr = append(arr, num)
-			continue
-		}
-	}
+	arr := algo.AllUpTo(&checkNum)
 
 	arr_s := ""
 	for i, v := range arr {
