@@ -10,7 +10,6 @@ func CheckAll(n *uint64, a *[]uint64) bool {
 	arr := *a
 	ok := false
 	for _, i := range arr{
-		//fmt.Println(i)
 		if Check(n, &i){
 			ok = true
 			break
