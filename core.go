@@ -24,7 +24,8 @@ func main() {
 	fmt.Println("引数: " + strconv.FormatUint(checkNum, 10) + "\n")
 
 	//arr := algo.AllToNum(&checkNum)
-	arr := algo.AllUpTo(&checkNum)
+	//arr := algo.AllUpTo(&checkNum)
+	arr := algo.RootUpTo(&checkNum)
 
 	arr_s := util.Uint64SliceToString(arr)
 	fmt.Println("素数: " + arr_s)
@@ -32,10 +33,10 @@ func main() {
 
 	//処理時間終了
 	timerEnd := time.Now()
-	fmt.Printf("%f秒\n", (timerEnd.Sub(timerStart)).Seconds())
+	fmt.Printf("%fs\n", (timerEnd.Sub(timerStart)).Seconds())
 	/*
 		アルゴリズムなし結果
-		1000000まで 80.591192
+		1000000まで 80.591192s
 		100000まで 1.035948s
 		50000まで 0.268564s
 		30000まで 0.100462s
@@ -43,6 +44,17 @@ func main() {
 		1000まで 0.001996s
 		500まで 0.002002s
 		100まで 0.01002s
+		10まで 0.001001s
+
+		Root結果
+		1000000まで 54.633719s
+		100000まで 0.597540s
+		50000まで 0.121492s
+		30000まで 0.057508s
+		10000まで 0.014011s
+		1000まで 0.001009s
+		500まで 0.001002s
+		100まで 0.01011s
 		10まで 0.001001s
 	*/
 }
