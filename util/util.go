@@ -4,6 +4,7 @@ import(
 	"strconv"
 )
 
+//uint64のスライスを文字列に変換
 func Uint64SliceToString(arr []uint64) string {
 	arr_s := ""
 	for i, v := range arr {

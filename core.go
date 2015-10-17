@@ -23,6 +23,7 @@ func main() {
 	}
 	fmt.Println("引数: " + strconv.FormatUint(checkNum, 10) + "\n")
 
+	//arr := algo.AllToNum(&checkNum)
 	arr := algo.AllUpTo(&checkNum)
 
 	arr_s := util.Uint64SliceToString(arr)
@@ -34,6 +35,7 @@ func main() {
 	fmt.Printf("%f秒\n", (timerEnd.Sub(timerStart)).Seconds())
 	/*
 		アルゴリズムなし結果
+		1000000まで 80.591192
 		100000まで 1.035948s
 		50000まで 0.268564s
 		30000まで 0.100462s
