@@ -25,7 +25,7 @@ func main() {
 
 	//arr := algo.AllToNum(&checkNum)
 	//arr := algo.AllUpTo(&checkNum)
-	arr := algo.MemRootUpTo(&checkNum)
+	arr := algo.ReadyMemRootUpTo(&checkNum)
 
 	arr_s := util.Uint64SliceToString(arr)
 	fmt.Println("素数: " + arr_s)
@@ -63,6 +63,17 @@ func main() {
 		50000まで    0.137934s
 		30000まで    0.060644s
 		10000まで    0.014040s
+		1000まで     0.002002s
+		500まで      0.001001s
+		100まで      0.001000s
+		10まで       0.001001s
+
+		ReadyMemRoot結果
+		1000000まで 30.654910s
+		100000まで   0.585412s
+		50000まで    0.153005s
+		30000まで    0.062100s
+		10000まで    0.015233s
 		1000まで     0.002002s
 		500まで      0.001001s
 		100まで      0.001000s
