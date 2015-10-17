@@ -27,9 +27,7 @@ func main() {
 
 	arr_s := util.Uint64SliceToString(arr)
 	fmt.Println("素数: " + arr_s)
-	fmt.Print("計: ")
-	fmt.Print(len(arr))
-	fmt.Println("個")
+	fmt.Printf("計: %d個\n", len(arr))
 
 	//処理時間終了
 	timerEnd := time.Now()
