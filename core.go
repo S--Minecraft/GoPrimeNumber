@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"time"
 )
 
 // nがmで割り切れるかどうか
@@ -16,7 +17,7 @@ func checkAll(n *uint64, a *[]uint64) bool {
 	arr := *a
 	ok := false
 	for _, i := range arr{
-		fmt.Println(i)
+		//fmt.Println(i)
 		if check(n, &i){
 			ok = true
 			break
@@ -26,6 +27,9 @@ func checkAll(n *uint64, a *[]uint64) bool {
 }
 
 func main() {
+	//処理時間開始
+	timerStart := time.Now()
+
 	// 調べる数(uint)
 	checkNum, err := strconv.ParseUint(os.Args[1], 10, 64)
 	if err != nil {
@@ -60,6 +64,19 @@ func main() {
 	fmt.Print("計: ")
 	fmt.Print(len(arr))
 	fmt.Println("個")
+
+	//処理時間終了
+	timerEnd := time.Now()
+	fmt.Printf("%f秒\n", (timerEnd.Sub(timerStart)).Seconds())
+	/*
+		アルゴリズムなし結果
+		100000まで 1.035948s
+		50000まで 0.268564s
+		30000まで 0.100462s
+		10000まで 0.026150s
+		1000まで 0.001996s
+		500まで 0.002002s
+		100まで 0.01002s
+		10まで 0.001001s
+	*/
 }
-
-
