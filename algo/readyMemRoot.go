@@ -6,9 +6,9 @@ import(
 
 // nまでのすべての素数を返す(2乗を記憶して計算量を減らす&メモリを最初に設定)
 func ReadyMemRootUpTo(n *uint64) []uint64 {
-	arr := make([]uint64, 0, *n)
+	arr := make([]uint64, 0, int(*n/2))
 	var num uint64 = 2
-	square := make([]Square, 0, *n)
+	square := make([]Square, 0, int(*n/2))
 	for ; num <= *n; num++ {
 		if len(arr) == 0 {
 			arrAppend(&arr, &num, &square)
@@ -36,9 +36,9 @@ func ReadyMemRootUpTo(n *uint64) []uint64 {
 
 // n個のすべての素数を返す
 func ReadyMemRootToNum(n *uint64) []uint64 {
-	arr := make([]uint64, 0, *n)
+	arr := make([]uint64, 0, int(*n/2))
 	var num uint64 = 2
-	square := make([]Square, 0, *n)
+	square := make([]Square, 0, int(*n/2))
 	for ; uint64(len(arr)) < *n; num++ {
 		if len(arr) == 0 {
 			arrAppend(&arr, &num, &square)
