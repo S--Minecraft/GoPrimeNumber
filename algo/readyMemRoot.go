@@ -1,7 +1,7 @@
 package algo
 
 import(
-	"../check"
+	"github.com/S--Minecraft/GoPrimeNumber/check"
 )
 
 // nまでのすべての素数を返す(2乗を記憶して計算量を減らす&メモリを最初に設定)
