@@ -1,8 +1,8 @@
 package main
 
 import (
-	"./algo"
-	"./util"
+	"github.com/S--Minecraft/GoPrimeNumber/algo"
+	"github.com/S--Minecraft/GoPrimeNumber/util"
 	"fmt"
 	"os"
 	"strconv"
